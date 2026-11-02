@@ -1,6 +1,6 @@
 [project]
 name = "stern-brocot-tree-search"
-version = "0.1.0"
+version = "0.1.1"
 description = "Compute optimal rational approximations to real numbers with bounded denominators via Stern-Brocot trees."
 requires-python = ">=3.10"
 dependencies = []
