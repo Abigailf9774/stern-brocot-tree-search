@@ -28,3 +28,10 @@ The trade-off: the algorithm is exact in exact arithmetic but the input is a Pyt
 - Negative targets are supported: the search runs on `|target|` and the sign is restored.
 - Integers return `n/1` with zero error.
 - The output fraction is always in lowest terms.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
